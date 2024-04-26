@@ -7,3 +7,6 @@ def home(request):
     tasks = Task.objects.all().order_by("-created_at")
     return render(request, "tasks/home.html", {"tasks": tasks})
 
+def add_task(request):
+    form = TaskForm(request.POST or None)
+    
