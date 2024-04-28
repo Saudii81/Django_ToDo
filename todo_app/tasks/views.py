@@ -9,4 +9,8 @@ def home(request):
 
 def add_task(request):
     form = TaskForm(request.POST or None)
-    
+    if form.is_valid():
+        form.save()
+        return redirect("home")
+    return render(request, "tasks/add_task.html", {"form": form})
+
