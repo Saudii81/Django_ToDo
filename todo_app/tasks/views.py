@@ -14,3 +14,5 @@ def add_task(request):
         return redirect("home")
     return render(request, "tasks/add_task.html", {"form": form})
 
+def edit_task(request, pk):
+    
