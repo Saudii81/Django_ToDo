@@ -15,4 +15,5 @@ def add_task(request):
     return render(request, "tasks/add_task.html", {"form": form})
 
 def edit_task(request, pk):
+    task = get_object_or_404(Task, pk=pk)
     
