@@ -17,3 +17,6 @@ def add_task(request):
 def edit_task(request, pk):
     task = get_object_or_404(Task, pk=pk)
     form = TaskForm(request.POST or None, instance=task)
+
+    if form.is_valid():
+        form.save()
