@@ -20,3 +20,5 @@ def edit_task(request, pk):
 
     if form.is_valid():
         form.save()
+        return redirect("home")
+    return render(request, "tasks/edit_task.html", {"form": form})
