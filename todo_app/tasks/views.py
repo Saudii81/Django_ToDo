@@ -22,3 +22,6 @@ def edit_task(request, pk):
         form.save()
         return redirect("home")
     return render(request, "tasks/edit_task.html", {"form": form})
+
+def delete_task(request, pk):
+    
