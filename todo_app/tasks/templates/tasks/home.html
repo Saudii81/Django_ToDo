@@ -8,5 +8,13 @@
     <h1>My Todo List</h1>
     <a href="{% url 'add_task' %}">Add Task</a>
     <hr>
+
+    {% for task %}
+        <p>
+            {% if task.completd %}
+            yes
+            {% else %}
+            no
+        </p>
 </body>
 </html>
