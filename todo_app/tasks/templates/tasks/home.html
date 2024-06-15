@@ -18,7 +18,7 @@
             {% endif %}
 
             {{% task.title %}}
-            
+            <a href="{% url 'edit_task' task.id %}">Edit</a>
         </p>
 </body>
 </html>
