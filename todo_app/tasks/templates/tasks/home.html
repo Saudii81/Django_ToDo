@@ -20,7 +20,11 @@
             {{% task.title %}}
             <a href="{% url 'edit_task' task.id %}">Edit</a>
 
-            <a href="{% url 'delete_task'task.id %}">Delete</a>
+            <a href="{% url 'delete_task'task.id %}">Delete</a> 
         </p>
+    {% empty %}
+        <p>No tasks yet.</p>
+    {% endfor %}
+    
 </body>
 </html>
