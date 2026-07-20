@@ -9,7 +9,7 @@
     <a href="{% url 'add_task' %}">Add Task</a>
     <hr>
 
-    {% for task %}
+    {% for task in tasks %}
         <p>
             {% if task.completd %}
             yes
@@ -17,7 +17,7 @@
             no
             {% endif %}
 
-            {{% task.title %}}
+            {{% tasks.title %}}
             <a href="{% url 'edit_task' task.id %}">Edit</a>
 
             <a href="{% url 'delete_task'task.id %}">Delete</a> 
@@ -25,6 +25,6 @@
     {% empty %}
         <p>No tasks yet.</p>
     {% endfor %}
-    
+
 </body>
 </html>
